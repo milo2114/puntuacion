@@ -2,8 +2,6 @@
 <html lang="es">
 
 <head>
-
-  <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>GAiA</title>
@@ -95,15 +93,10 @@
           $_GET["ruta"] == "fichas" ||
           $_GET["ruta"] == "identificacion"|| 
           $_GET["ruta"] == "financiera"||
-<<<<<<< HEAD
-          $_GET["ruta"] == "Usuarios"||
-          $_GET["ruta"] == "verificacion"
-=======
           $_GET["ruta"] == "verificacion"||  
           $_GET["ruta"] == "reportes"||  
           $_GET["ruta"] == "inscripciones"||
           $_GET["ruta"] == "Usuarios"
->>>>>>> 732c4477f30d25dc94a1d673193362d9bb5f9891
         ) 
         {
           include "modulos/" . $_GET["ruta"] . ".php";
