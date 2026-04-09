@@ -25,7 +25,7 @@
                with font-awesome or any other icon font library -->
 
            <!-- CONFIGURACION -->
-          <li class="nav-item menu-open">
+          <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-cog"></i>
               <p>
@@ -78,7 +78,7 @@
 
 
           <li class="nav-item">
-            <a href="pages/widgets.html" class="nav-link">
+            <a href="inscripciones" class="nav-link">
               <i class="nav-icon fas fa-pencil-alt"></i>
               <p>
                 Inscripciones
@@ -86,7 +86,7 @@
             </a>
           </li> 
           
-          <li class="nav-item menu-open">
+          <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-handshake"></i>
               <p>
@@ -97,7 +97,7 @@
             
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="./index.html" class="nav-link">
+                <a href="verificacion" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Verificación</p>
                 </a>
@@ -123,7 +123,7 @@
           </li>
           
           <li class="nav-item">
-            <a href="pages/widgets.html" class="nav-link">
+            <a href="reportes" class="nav-link">
               <i class="fas fa-chart-bar"></i>
               <p>
                 Reportes
