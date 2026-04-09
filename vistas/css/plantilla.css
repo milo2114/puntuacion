@@ -1,0 +1,56 @@
+.custom-table-docs th {
+    background-color: #0b5e28 !important;
+    color: white !important;
+    vertical-align: middle !important;
+    border: 1px solid white !important;
+}
+
+.custom-table-docs td {
+    vertical-align: middle !important;
+    border: 1px solid white !important;
+    font-weight: 500;
+}
+
+.td-dark {
+    background-color: #17652e !important;
+    color: white !important;
+}
+
+.td-pending {
+    background-color: #ffc107 !important;
+    color: black !important;
+}
+
+.td-missing {
+    background-color: #6c757d !important;
+    color: white !important;
+}
+
+.td-approved {
+    background-color: #2fb046 !important;
+    color: white !important;
+}
+
+.td-rejected {
+    background-color: #ed2136 !important;
+    color: white !important;
+}
+
+.td-score {
+    background-color: white !important;
+    color: black !important;
+}
+
+.header-title-docs {
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+    /* Assuming dark mode context */
+}
+
+.btn-rounded-custom {
+    border-radius: 20px !important;
+    padding-left: 20px;
+    padding-right: 20px;
+}
