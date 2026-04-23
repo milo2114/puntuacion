@@ -15,10 +15,16 @@
     <!-- Theme style -->
     <link rel="stylesheet" href="vistas/dist/css/adminlte.min.css">
 
+    <style>
+    </style>
+
     <!-- DataTables -->
     <link rel="stylesheet" href="vistas/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
     <link rel="stylesheet" href="vistas/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
-    <link rel="stylesheet" href="vistas/plugins/datatables-buttons/css/buttons.bootstrap4.min.css">    
+    <link rel="stylesheet" href="vistas/plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+
+    <!-- Estilos Personalizados de la App -->
+    <link rel="stylesheet" href="vistas/css/plantilla.css">
 
     <!-- ************************************************************ -->
 
@@ -44,15 +50,6 @@
     <script src="vistas/plugins/datatables-buttons/js/buttons.print.min.js"></script>
     <script src="vistas/plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
 
-
-
-
-
-
-
-    <!-- AdminLTE App -->
-    <script src="vistas/dist/js/adminlte.js"></script>
-
     <!-- PAGE PLUGINS -->
     <!-- jQuery Mapael -->
     <script src="vistas/plugins/jquery-mousewheel/jquery.mousewheel.js"></script>
@@ -62,11 +59,13 @@
     <!-- ChartJS -->
     <script src="vistas/plugins/chart.js/Chart.min.js"></script>
 
-    <!-- AdminLTE for demo purposes -->
-    <!-- <script src="vistas/dist/js/demo.js"></script> -->
     <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
     <script src="vistas/dist/js/pages/dashboard2.js"></script>
 
+    <!-- AdminLTE App -->
+    <script src="vistas/dist/js/adminlte.js"></script>
+    <!-- AdminLTE for demo purposes -->
+    <!-- <script src="vistas/dist/js/demo.js"></script> -->
 
 
   </head>
@@ -91,14 +90,13 @@
           $_GET["ruta"] == "apoyos" ||
           $_GET["ruta"] == "sedes" ||
           $_GET["ruta"] == "fichas" ||
-          $_GET["ruta"] == "identificacion"|| 
-          $_GET["ruta"] == "financiera"||
-          $_GET["ruta"] == "verificacion"||  
-          $_GET["ruta"] == "reportes"||  
-          $_GET["ruta"] == "inscripciones"||
+          $_GET["ruta"] == "identificacion" ||
+          $_GET["ruta"] == "financiera" ||
+          $_GET["ruta"] == "verificacion" ||
+          $_GET["ruta"] == "reportes" ||
+          $_GET["ruta"] == "inscripciones" ||
           $_GET["ruta"] == "Usuarios"
-        ) 
-        {
+        ) {
           include "modulos/" . $_GET["ruta"] . ".php";
         } //fin del enrutador
         else {
@@ -117,25 +115,8 @@
 
 
 
-  <script>
-    $(function () {
-      $("#example1").DataTable(
-        {
-        "responsive": true, "lengthChange": false, "autoWidth": false,
-        "buttons": ["excel", "pdf"]
-      }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
-      $('#example2').DataTable({
-        "paging": true,
-        "lengthChange": false,
-        "searching": false,
-        "ordering": true,
-        "info": true,
-        "autoWidth": false,
-        "responsive": true,
-      }
-    );
-    });
-  </script>  
+  <script src="vistas/js/plantilla.js"></script>
+  <script src="vistas/js/styles.css"></script>
 
 
 
