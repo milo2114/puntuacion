@@ -43,6 +43,12 @@
           <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
         </div>
       </li>
+      
+      <!-- BOTON DE SALIR TEMPORAL -->
+      <div >
+        <a href="Salir" class="dropdown-item"><i class="fas fa-sign-out-alt mr-2"></i> Cerrar sesión</a>
+      </div>
+
       <li class="nav-item">
         <a class="nav-link" data-widget="fullscreen" href="#" role="button">
           <i class="fas fa-expand-arrows-alt"></i>

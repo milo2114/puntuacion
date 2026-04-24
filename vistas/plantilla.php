@@ -1,3 +1,9 @@
+<?php
+
+  session_start();
+
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -70,20 +76,24 @@
 
   </head>
 
-<body class="hold-transition dark-mode sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
+<body class="hold-transition dark-mode sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed login-page">
+  <!-- wrapper -->
+  <?php
+    if (isset($_SESSION["iniciarSesion"]) && $_SESSION["iniciarSesion"] == "ok") {
 
-  <div class="wrapper">
-    <?php
-    include 'modulos/encabezado.php';
-    include 'modulos/menu.php';
-    ?>
+      echo "<script>
+        document.addEventListener('DOMContentLoaded', function () {
+          document.body.classList.remove('login-page');
+        });
+      
+      </script>";
+      echo '<div class="wrapper">';
+      include 'modulos/encabezado.php';
+      include 'modulos/menu.php';
+      echo '<div class="content-wrapper">';
 
-    <!-- Content Wrapper. Contains page content -->
-    <div class="content-wrapper">
-
-
-      <?php
       if (isset($_GET["ruta"])) {
+        
         if (
           $_GET["ruta"] == "inicio" ||
           $_GET["ruta"] == "puntuacion" ||
@@ -95,23 +105,29 @@
           $_GET["ruta"] == "verificacion" ||
           $_GET["ruta"] == "reportes" ||
           $_GET["ruta"] == "inscripciones" ||
-          $_GET["ruta"] == "Usuarios"
+          $_GET["ruta"] == "Usuarios" ||
+          $_GET["ruta"] == "Salir"
+
         ) {
           include "modulos/" . $_GET["ruta"] . ".php";
-        } //fin del enrutador
+        } //fin de lista blanca
         else {
           include "modulos/error404.php";
         } // si la ruta no existe
+
       }
+      // cerrando el content wrapper
+      echo "</div>";
+      include 'modulos/footer.php';
+      echo "</div>";
+    } else {
+      include "modulos/login.php";
+    }
 
-      ?>
 
-    </div>
-    <!-- /.content-wrapper -->
-    <?php
-    include 'modulos/footer.php';
     ?>
-  </div>
+
+
 
 
 
